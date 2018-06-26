@@ -19,17 +19,17 @@
                         <p class="lead text-center">Authenticate using your social network account from one of following
                             providers</p>
                         <a href="{{ route('social.oauth', 'facebook') }}" class="btn btn-primary btn-block">
-                            Login with Facebook
+                            <i class="fa fa-facebook"></i> Login with Facebook
                         </a>
                         <a href="{{ route('social.oauth', 'twitter') }}" class="btn btn-info btn-block">
-                            Login with Twitter
+                            <i class="fa fa-twitter"></i> Login with Twitter
                         </a>
                         <a href="{{ route('social.oauth', 'google') }}" class="btn btn-danger btn-block">
-                            Login with Google
+                            <i class="fa fa-google"></i> Login with Google
                         </a>
                         <a href="{{ route('social.oauth', 'github') }}"
                            class="btn btn-default btn-block" style="background-color: #ddd">
-                            Login with Github
+                            <i class="fa fa-github"></i> Login with Github
                         </a>
                         <hr>
                         <a href="{{ route('login') }}" class="btn btn-default btn-block">

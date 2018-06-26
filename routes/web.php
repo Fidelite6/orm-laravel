@@ -10,7 +10,15 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Auth::routes();
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('auth/social', 'Auth\SocialAuthController@show')->name('social.login');
+Route::get('oauth/{driver}', 'Auth\SocialAuthController@redirectToProvider')->name('social.oauth');
+Route::get('oauth/{driver}/callback', 'Auth\SocialAuthController@handleProviderCallback')->name('social.callback');
+
+Route::get('/', 'OrmController@index');
+Route::get('/eagerLoading', 'OrmController@eagerLoading');
+
+
+
+Route::get('/home', 'HomeController@index')->name('home');
